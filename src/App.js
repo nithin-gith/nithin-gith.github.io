@@ -5,11 +5,11 @@ function App() {
     const [place,setplace] = useState('');
     var [locData,setlocData] = useState(
       { name:"",
-        region:"",
-        temp:"",
-        h_temp:"",
-        l_temp:"",
-        avg_temp:"",
+        region:"-",
+        temp:"-",
+        h_temp:"-",
+        l_temp:"-",
+        avg_temp:"-",
         desc:"",
         img_url:""
         });
