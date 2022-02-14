@@ -34,7 +34,7 @@ function App() {
           })}) 
     }
     )
-    .catch((error)=>console.log(error))
+    .catch((error)=>{console.log(error);alert("Please enter a valid place name...")})
   }
 
   
