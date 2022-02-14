@@ -21,10 +21,6 @@ function App() {
   function handleClick(){
     fetch(`http://api.weatherapi.com/v1/forecast.json?key=5763517a0030474991565608221102&q=${place}&days=1&aqi=no&alerts=no`)
     .then(responce => {
-      if(!responce.ok){
-        alert("Please enter valid city name")
-      }
-      else{
 
         responce.json().then(data=>{console.log(data);setlocData(
           { name:data.location.name,
@@ -35,11 +31,10 @@ function App() {
             avg_temp:data.forecast.forecastday[0].day.avgtemp_c,
             desc:data.forecast.forecastday[0].day.condition.text,
             img_url:data.forecast.forecastday[0].day.condition.icon
-          })})
-
-      }
+          })}) 
     }
     )
+    .catch((error)=>console.log(error))
   }
 
   
