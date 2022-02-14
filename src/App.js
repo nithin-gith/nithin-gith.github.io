@@ -19,7 +19,7 @@ function App() {
      setplace(city);
     }
   function handleClick(){
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=5763517a0030474991565608221102&q=${place}&days=1&aqi=no&alerts=no`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=5763517a0030474991565608221102&q=${place}&days=1&aqi=no&alerts=no`)
     .then(responce => {
 
         responce.json().then(data=>{console.log(data);setlocData(
